@@ -1,0 +1,3 @@
+3. Video MemberLayout steimizi ekledik ilk baþta View içine geldik Shared sað týk ve view ekledik bu view kendi baþýna bir layout olacaðý için hiçbir 
+seçenek seçmedik ardýndan controller geldik sað týk yap ve profilecontroller oluþturduk Index sað týklayýp view oluþturduk bu view ise MemberLayout
+için kullandýk sitemiz oluþturduk.

@@ -3,3 +3,17 @@ seçenek seçmedik ardýndan controller geldik sað týk yap ve profilecontroller olu
 için kullandýk sitemiz oluþturduk.
 4. Video appsettingsjson da bir connectionstrings tanýmladýk onuda connection içindeki kendi veri tabaný baðlantý yolumuzu tanýmladýk. SQL connect
 tanýmlamak içinde paket yükleme yerinden paketimizi yükledik microsoft.data.client olaný
+5. Video programcs de bazý kodlar eklendi ve açýklama satýrlarý kondu yoksa swaggerda hata dönmektedir. ve categories controller tanýmlandý ve onun içine 
+listelemek için gerekli kodlar geçildi ve açýklama satýrlarý yazýldý.
+6-7. Video Dtos klasörüne update ve ve create repostory içleri dolduruldu ve ardýndan bunlar categoryrepository de çaðrýldý ardýndan bunlarýn güncellenebilmesi
+için IcategoryRepository güncelleme , ekleme ve silme methodlarý eklendi ve bunlarda CategoryRepositoryde çaðrýldý bunlarýn iþlemleri için categoryrepository de
+açýklama satýrlarýna bakarak neyin ne olduðunu anlayabilirsin mesela Dto içindeki updatecategorydto güncellenmesi istenen veritabaný verilerini burada çaðýrýlmýþ
+oldu aslýnda categorydtos oradaki methodlar buraya çaðýrýlmýþ oldu.
+8. Video IcategoryRepository içine task<GetByIDCategoryDto> tanýmladýk bunuda Dtos klasörün içinden aldýk ve id þeklinde belirttik. Ardýndan categoryrepository 
+geldik ve burada implemente ettik ardýndan category sadece id þeklinde girilen id þeklinde gelmesi için tanýmladýk bakabilirsin orada kýsa açýklama satýrlarý var.
+Ardýndan categoriesController geldim category id þeklinde çaðýrdýðýmda gelip gelmeyeceðine baktýk. iþlemi gerçekleþtirdik aslýnda categoriescontrollerda.
+9. Video Category benzer iþlemler yapýldý ilk baþta Product Repository klasörü oluþturuldu. Bu klasörlerin içine IproductRepository ve Product Repository
+oluþturuldu. Ardýndan database miraslarýný alacaðýmýz için bir ProductDto klasörü tanýmlandý ve onun içine productdto tanýmladýk onada metotlar tanýmlandý.
+ProductRepository ise bizim sql sorgusunda yapýlmasý istenen iþlemleri burada tanýmlandýk backendini yazdýk. açýklama satýrlarý detaylý þekilde anlatmaktadýr.
+Ardýndan ProductsController geldik oraya da bizim web sayfasýnda iþleme dökmek için kodlar yazdýk onun içinede bakýldýðýnda detaylý kodlar yazmaktadýr.
+10. Video Ýzle

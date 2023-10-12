@@ -1,6 +1,6 @@
 ﻿namespace RealEstate_Dapper_Api.Dtos.CategoryDtos
 {
-    public class UpdateCategoryDto
+    public class GetByIDCategoryDto
     {
         public int CategoryID { get; set; }     // Kategori kimliği (ID) için özellik.
         public string CategoryName { get; set; } // Kategori adı için özellik.

@@ -16,4 +16,13 @@ Ardýndan categoriesController geldim category id þeklinde çaðýrdýðýmda gelip gel
 oluþturuldu. Ardýndan database miraslarýný alacaðýmýz için bir ProductDto klasörü tanýmlandý ve onun içine productdto tanýmladýk onada metotlar tanýmlandý.
 ProductRepository ise bizim sql sorgusunda yapýlmasý istenen iþlemleri burada tanýmlandýk backendini yazdýk. açýklama satýrlarý detaylý þekilde anlatmaktadýr.
 Ardýndan ProductsController geldik oraya da bizim web sayfasýnda iþleme dökmek için kodlar yazdýk onun içinede bakýldýðýnda detaylý kodlar yazmaktadýr.
-10. Video Ýzle
+10. Video Bir defaultcontroller oluþturduk ondan bir öncede sharedda view oluþturduk bu view hiçbir yere baðlý olmayýp sadece kendisi bir layout olacak
+ardýndan bu layoutu en kýsa web site kodunu seçip bunun içine kopyalýyoruz yani html kodlarýný ardýndan bunlara birer viewcomponent ayýrdýk ve layout klasörü
+tanýmladýk ondan sonra bunlarý default seçeceðimiz için shared altýna viewcomponents tanýmladýk ordada buraya view ekledik ve partial olarak eklendi ardýndan
+layoutta ki bir html kodlarýný component ayýrmýþ olduk.
+11. Video Burada Viewcomponents içine HomePage klasörü tanýmladýk ardýndan homepage klasörünün içine birer class atadýk sonrasýnda
+bir view component tanýmladýk bu oluþturulan classlara bu classlarýn bir view olmak zorundaki biz onu default içindeki indexde taþýyabilelim
+bu sebepten shared içindeki componente homepage içinde tanýmlanan class isimlerinin aynýsý klasör þeklini tanýmladýk ve bu klasörlere sað týk yapýp
+birer view oluþturduk bu viewler birer partial olacak ve isimleri default olacaktýr view tanýmladýktan sonra wwwroot içindeki indexdeki html kodlarýný bize ait 
+olanlaru aldýk ve bizim tanýmladýðýmýz defaultlara yapýþtýrdýk.
+12. Video Ýzle

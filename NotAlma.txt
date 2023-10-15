@@ -1,28 +1,55 @@
 3. Video MemberLayout steimizi ekledik ilk baþta View içine geldik Shared sað týk ve view ekledik bu view kendi baþýna bir layout olacaðý için hiçbir 
 seçenek seçmedik ardýndan controller geldik sað týk yap ve profilecontroller oluþturduk Index sað týklayýp view oluþturduk bu view ise MemberLayout
 için kullandýk sitemiz oluþturduk.
+
 4. Video appsettingsjson da bir connectionstrings tanýmladýk onuda connection içindeki kendi veri tabaný baðlantý yolumuzu tanýmladýk. SQL connect
 tanýmlamak içinde paket yükleme yerinden paketimizi yükledik microsoft.data.client olaný
+
 5. Video programcs de bazý kodlar eklendi ve açýklama satýrlarý kondu yoksa swaggerda hata dönmektedir. ve categories controller tanýmlandý ve onun içine 
 listelemek için gerekli kodlar geçildi ve açýklama satýrlarý yazýldý.
+
 6-7. Video Dtos klasörüne update ve ve create repostory içleri dolduruldu ve ardýndan bunlar categoryrepository de çaðrýldý ardýndan bunlarýn güncellenebilmesi
 için IcategoryRepository güncelleme , ekleme ve silme methodlarý eklendi ve bunlarda CategoryRepositoryde çaðrýldý bunlarýn iþlemleri için categoryrepository de
 açýklama satýrlarýna bakarak neyin ne olduðunu anlayabilirsin mesela Dto içindeki updatecategorydto güncellenmesi istenen veritabaný verilerini burada çaðýrýlmýþ
 oldu aslýnda categorydtos oradaki methodlar buraya çaðýrýlmýþ oldu.
+
 8. Video IcategoryRepository içine task<GetByIDCategoryDto> tanýmladýk bunuda Dtos klasörün içinden aldýk ve id þeklinde belirttik. Ardýndan categoryrepository 
 geldik ve burada implemente ettik ardýndan category sadece id þeklinde girilen id þeklinde gelmesi için tanýmladýk bakabilirsin orada kýsa açýklama satýrlarý var.
 Ardýndan categoriesController geldim category id þeklinde çaðýrdýðýmda gelip gelmeyeceðine baktýk. iþlemi gerçekleþtirdik aslýnda categoriescontrollerda.
+
 9. Video Category benzer iþlemler yapýldý ilk baþta Product Repository klasörü oluþturuldu. Bu klasörlerin içine IproductRepository ve Product Repository
 oluþturuldu. Ardýndan database miraslarýný alacaðýmýz için bir ProductDto klasörü tanýmlandý ve onun içine productdto tanýmladýk onada metotlar tanýmlandý.
 ProductRepository ise bizim sql sorgusunda yapýlmasý istenen iþlemleri burada tanýmlandýk backendini yazdýk. açýklama satýrlarý detaylý þekilde anlatmaktadýr.
 Ardýndan ProductsController geldik oraya da bizim web sayfasýnda iþleme dökmek için kodlar yazdýk onun içinede bakýldýðýnda detaylý kodlar yazmaktadýr.
+
 10. Video Bir defaultcontroller oluþturduk ondan bir öncede sharedda view oluþturduk bu view hiçbir yere baðlý olmayýp sadece kendisi bir layout olacak
 ardýndan bu layoutu en kýsa web site kodunu seçip bunun içine kopyalýyoruz yani html kodlarýný ardýndan bunlara birer viewcomponent ayýrdýk ve layout klasörü
 tanýmladýk ondan sonra bunlarý default seçeceðimiz için shared altýna viewcomponents tanýmladýk ordada buraya view ekledik ve partial olarak eklendi ardýndan
 layoutta ki bir html kodlarýný component ayýrmýþ olduk.
+
 11. Video Burada Viewcomponents içine HomePage klasörü tanýmladýk ardýndan homepage klasörünün içine birer class atadýk sonrasýnda
 bir view component tanýmladýk bu oluþturulan classlara bu classlarýn bir view olmak zorundaki biz onu default içindeki indexde taþýyabilelim
 bu sebepten shared içindeki componente homepage içinde tanýmlanan class isimlerinin aynýsý klasör þeklini tanýmladýk ve bu klasörlere sað týk yapýp
 birer view oluþturduk bu viewler birer partial olacak ve isimleri default olacaktýr view tanýmladýktan sonra wwwroot içindeki indexdeki html kodlarýný bize ait 
 olanlaru aldýk ve bizim tanýmladýðýmýz defaultlara yapýþtýrdýk.
-12. Video Ýzle
+
+12. Video arasýnda 11 videoda olduðu gibi yine view componentlere ayýrýp frontend taraflarýný ayarladýk teker teker ayýrma iþlemi yaptýk 
+13. Videoda ise oluþturduðumuz viewcomponents homepage klasörünün içinde productlistcomponentliste içine gerekli metodlarý tanýmladýk metodlarda json formatýyla
+tanýmlandý oraya bakarsa gerekli kodlarý görürsün açýklama kýsýmlarýyla ardýndan shared yer alan components ayný adlý klasörünü bulduk ve bir model oluþturduk
+model ise yeni oluþturduðumuz productdtos klasörünü içine resultproductdtos classý oluþturduk ardýndan swaggerda olan prodcutlist execute ettiðimizde orada 
+indirme butonu var oradan indirdiðimiz json formatlý verileri c# edit üzerine özellikli yapýþtýrma var oradan yapýþtýrý gerekli düzeltmeler yap
+sonrasýnda bunu hertürlü shareddeki componentdeki viewda çaðýrabilirsin orada tanýmlý ise gelecektir orasý database verilerinin alýndýðý yerdir.
+
+14. Videp ilk baþta defaultýmýz çalýþýyor mu ona baktýk ardýndan ilk baþta api kýsmýna geldik çünkü ekleme silme ve güncelleme iþlemlerini api kýsmýnda yapýyor 
+olucaz ilk baþta repositorylere geldik repositorylerden IWhoWeAreRepository oluþturduk ekleme silme güncelleme iþlemleri için ardýndan ona ait bir class oluþturduk
+WhoWeAreRepository diye oraya IWhoWeAreRepository eklentisi aldýk ve implementte ettik oradan sonra WhoWeAreDetailDtos oluþturduk sorgularýmýzý yazacaðýz ama 
+hangi crud iþlemleri yapacaz çünkü crud iþlemlerimiz dtos tanýmlý deðil dtos tanýmladýk iþlemleri dtosda tanýmlanan iþlemler ise bizim databasedeki verilerimiz tutan
+kýsýmlar tanýmlýyoruz ardýndan WhoWeAreRepository geldik ve sql sorgularýný tanýmladýk ve gerekli dtosdaki verileri ekleme silme güncelleme iþlemleri için çalýþtýrdýk.
+ardýndan Controller tarafýndan bir whowearecontroller oluþturduk ve orada gerekli swagger çalýþacak iþlemleri yaptýk.
+
+15.video günün favori evleri yerinde database eklediðimiz 2 veri gelmiyordu bunun için ilk baþta api tarafýnda resultproductwithcategorydto geldik orada databasede olan
+image,type ve address ekledik ardýndan bunlarý ekledikten sonra product repository bunlarý sorgu þeklinde çektiðimiz için sorguya bu tanýmladýktlarýmýz eklememiz gerekti
+bu iþlemleri yaptýktan sonra tekrardan database verilerini bu sefer ui tarafýnda çekmemiz için dtos klasörünün içindeki resultproductdtos olan yerede apide olan dtos 
+kýsmýndaki verileride girmiþ oldum ardýndan defaulta geldiðimde bu tanýmladýðýmýz dtoslarý default kýsmýnda gerekli yerlere yerleþtirdim.
+
+16. video izle

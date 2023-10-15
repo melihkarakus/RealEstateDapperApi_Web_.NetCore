@@ -20,5 +20,8 @@
         public string CategoryName { get; set; }
         // Ürünün ait olduğu kategori adını temsil eden özellik. Bu özellik,
         // ürünlerin hangi kategoriye ait olduğunu belirtir ve ilişkili "Category" sınıfındaki "CategoryName" özelliği ile ilişkilendirilir.
+        public string CoverImage { get; set; }
+        public string Type { get; set; }
+        public string Address { get; set; }
     }
 }

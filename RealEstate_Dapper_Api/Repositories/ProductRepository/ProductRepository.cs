@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Dtos.ProductDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
 
@@ -28,7 +27,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
         public async Task<List<ResultProductWithCategoryDto>> GetAllProductWithCategory()
         {
             // SQL sorgusu, 'Product' tablosundaki tüm verileri alır ve ilgili kategori adını ekler.
-            string query = "SELECT ProductID, Title, Price, City, District, CategoryName FROM Product INNER JOIN Category ON Product.ProductCategory = Category.CategoryID";
+            string query = "SELECT ProductID, Title, Price, City, District, CategoryName, CoverImage, Type, Address FROM Product INNER JOIN Category ON Product.ProductCategory = Category.CategoryID";
             using (var connection = _context.CreateConnection())
             {
                 var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);

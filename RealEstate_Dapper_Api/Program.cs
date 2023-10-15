@@ -1,6 +1,7 @@
 using RealEstate_Dapper_Api.Models.DapperContext;
 using RealEstate_Dapper_Api.Repositories.CategoryRepositories;
 using RealEstate_Dapper_Api.Repositories.ProductRepository;
+using RealEstate_Dapper_Api.Repositories.WhoWeAreRepostiory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,10 @@ builder.Services.AddTransient<ICategoryRepository, CategoryRepositoy>();
 // 2. IProductRepository arabirimini ProductRepository sýnýfý ile eþle, 
 // böylece bu arabirimi uygulayan nesneleri enjekte edebilirsiniz.
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
+
+// 2. IProductRepository arabirimini ProductRepository sýnýfý ile eþle, 
+// böylece bu arabirimi uygulayan nesneleri enjekte edebilirsiniz.
+builder.Services.AddTransient<IWhoWeAreDetailRepository, WhoWeAreDetailRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

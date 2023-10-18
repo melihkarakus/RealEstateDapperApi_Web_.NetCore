@@ -1,0 +1,48 @@
+--Create Table Testimonial
+--(
+--TestimonialID int primary key identity (1,1),
+--NameSurname nvarchar(50),
+--Title nvarchar(100),
+--Comment nvarchar(500),
+--Status bit
+--)
+--Create Table SubFeature
+--(
+--SubFeatureID int primary key identity(1,1),
+--Icon nvarchar(250),
+--TopTitle nvarchar(250),
+--MainTitle nvarchar(250),
+--Description nvarchar(250),
+--SubTitle nvarchar(250)
+--)
+--Create Table MailSubscribe
+--(
+--MailID int primary key identity(1,1),
+--Email nvarchar(250),
+--)
+--Create Table SocialMedia
+--(
+--SocialMediaID int primary key identity(1,1),
+--Name nvarchar(250),
+--Icon nvarchar(250),
+--SocialMediaUrl nvarchar(300)
+--)
+--Create Table Contact
+--(
+--ContactID int primary key identity(1,1),
+--Name nvarchar(250),
+--Subject nvarchar(250),
+--Email nvarchar(100),
+--Message nvarchar(max)
+--)
+--Create Table Address
+--(
+--AddressID int primary key identity(1,1),
+--AddressTitle nvarchar(250),
+--Description nvarchar(250),
+--PhoneTitle nvarchar(250),
+--Phone1 nvarchar(50),
+--Phone2 nvarchar(50),
+--Email nvarchar(50),
+--Location nvarchar(500)
+--)

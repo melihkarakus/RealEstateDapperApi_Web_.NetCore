@@ -38,7 +38,7 @@ namespace RealEstate_Dapper_Api.Controllers
             // 3. İşlem başarılı ise HTTP 200 OK yanıtı döndürülür ve bir mesaj eklenir.
             return Ok("Kategori Başarılı Şekilde Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
             // 2. IcategoryRepository kullanarak silincek kategoriyi id şekilde sildi.

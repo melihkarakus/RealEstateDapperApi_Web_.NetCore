@@ -1,0 +1,13 @@
+--Create Table BottomGrid
+--(
+--BottomGridID int identity (1,1) primary key,
+--Icon nvarchar(100),
+--Title nvarchar(100),
+--Description nvarchar(250)
+--)
+--Create Table PopularLocation
+--(
+--LocationID int primary key identity (1,1),
+--CityName Nvarchar(50),
+--ImageUrl Nvarchar(500)
+--)

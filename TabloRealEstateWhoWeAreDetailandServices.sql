@@ -1,0 +1,14 @@
+--Create Table WhoWeAreDetail
+--(
+--WhoWeAreDetailID int identity (1,1) primary key,
+--Title nvarchar(100),
+--SubTitle nvarchar(100),
+--Description1 nvarchar(500),
+--Description2 nvarchar(500)
+--)
+--Create Table Services
+--(
+--ServiceID int identity (1,1) primary key,
+--ServiceName nvarchar(100),
+--ServiceStatus bit
+--)

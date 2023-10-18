@@ -52,4 +52,52 @@ image,type ve address ekledik ardýndan bunlarý ekledikten sonra product reposito
 bu iþlemleri yaptýktan sonra tekrardan database verilerini bu sefer ui tarafýnda çekmemiz için dtos klasörünün içindeki resultproductdtos olan yerede apide olan dtos 
 kýsmýndaki verileride girmiþ oldum ardýndan defaulta geldiðimde bu tanýmladýðýmýz dtoslarý default kýsmýnda gerekli yerlere yerleþtirdim.
 
-16. video izle
+16. video Biz kimiz yerlerini viewbag ile taþýnma iþlemi yapmamýz gerekli burada ilk baþta Dtos içine ResultWhoWeAreDtos class oluþturduk ve veri tabanýndaki 
+verileri almýþ olduk WhoWeAreDetailList buradan gelen api controllerý whowearedetail yani swagger çalýþan whowearedetail execute ettiðimizde orada çýkan bir url var 
+onu alýp gerekli yere yapýþtýrýyoruz ki görürsün oradaki homapage içinde olan whoweare invokeda ardýndan viewbag taþýmalarýný yaptýk ve bunlarý default view oraya 
+viewbagledik
+
+17.video ilk baþta IserviceRepository ve ServiceRepository ekledik Iservicerepository de crud iþlemlerini tanýmladýk ve servicesrepository bunlarý tanýmladýk ardýndan 
+servicesrepository geldik gerekli sql sorgusunu tanýmladýk ve bunu gerekli baðlantýlarla swagger gelmesini saðladýk ayriyetten bunlarý servicedtoda IserviceDtoda olan crud
+iþlemleri için gerekli database verilerini burada taþýmýþ olduk. Ardýndan controller tarafýnda httpget olarak service veritabanýndaki verileri çaðýrmak için 
+httpget fonksiyonu tanýmladýk ve bunu bizim swagger da çaðýrmýþ olduk controller tanýmladýðýmýzda. Ardýndan bizim site tarafýna resultservicedtos uida yani
+orayada veritabaný verilerini tanýmladýk. Bunlarý diðer video homepage olduðu yerde defaultservicecomponentpartial olan yerde gerekli kodlarý yazýcaz ve 
+gerekli iþlemleri orada yapacaðýz
+
+18.video whowearecomponentpartial da iþlemlerin aynýsýný bu sefer 2 þeklinde alýyoruz ama services doðru düzgün tanýmlandýðýna ve return view value2 döndürdüðümüze dikkat 
+etmemiz gerekecektir.
+
+19. video ilk baþta dtos kýsmýna bottomgriddtos diye bir klasör eklendi ve gerekli veri tabanýndan gelecek iþlemleri classlara tanýmladýk. 
+Ardýndan Repositories klasörüne Bottomgridrepository ve IBottomgridrepository class ve interface tanýmladýk interface gerekli silme güncelleme ve ekleme iþlemleri yaptýk.
+Bottomgridrepository class içinde ise bunu sql sorgusu ile çaðýrdýk ardýndan controller tarafýnda swagger için gerekli httpget metodu tanýmladýk.
+UI tarafýnda dtos klasörünün içine bottomgriddtos için gerekli veritabaný sýnýflarýný tanýmladýk. ardýndan ilk homepage defaultbottomgridcomponentpartial sýnýfýnýn içine
+gerekli site tarafýnda gerekli listeleme döndürme iþlemleri ve siteye getirme iþlemleri yapýldý. Ardýndan shared içinde olan defaultbottomgrildpartial klasörünün
+view olan yerde model þeklinde gerekli verileri databaseden dtos aracýlýðý ile taþýdýk dtos aracýlýðý hepsi birbirine baðlantýlýdýr.
+
+20. video yukarýda iþlemlerin aynýsý 
+
+21. Video 19.videoda olan iþlemler yapýldý
+
+22. Video Admin Layout oluþturuldu partial componentlere ayrýldý.
+
+23. video Admin Layout Partiallara ayrýldý.
+
+24. Video Admin layout partiallarý ayýrdýk ve category controllerda consume iþlemi yapýlýp listeleme iþlemi yapýlýdý controller klasöründe categorycontroller
+kodun açýklama kýsýmlarýný bulabilirsin.
+
+25. Video category ekleme sayfasýný yaptýk category controller sayfasýnda create category gerekli kodlar controller sayfasýnda vardýr.
+
+26. Video category silme ve güncelleme sayfalarýný yaptýk controller tarafýnda deletecategory yerinde id ile çaðýrýp deleteasync gönderimi ile veriyi sildik.
+updatecategory ile ilk id getirmesi yaptýk ve onu ne olduðunu inputa yazdýrdýk ardýnda post iþleminde de güncelleme yaptýk.
+
+27. Video ürün listeleme iþlemleri uygulandý productcontrollerda ProductList bakabilirsin.
+
+28. Videoda product ekleme iþlemi için bir dropdown gibi kaydetme yapabilmek için bir list ve büüyktür küçüktür içine listselecteditem ekledim ardýndan isimlendirdim
+eþittir koyup parantez için from x in values.tolist dedim x içindeki tümünü listele ardýndan select new selectlistitem bir seçim sundum
+ve parantez içinde bende text ve value istedi value bir id gönderme , text ise bir metin gönderme olarak ayarlandý
+
+29. Video ilk önce dtos oluþturuldu emplooye için databasedeki verileri çekmek için ardýndan bir IemployeeRepository ve EmployeeRepository oluþturdum.
+IemployeeRepositoryde crud iþlemlerini gerçekleþtirmek için tanýmlamalar yaptým. ardýndan EmployeeRepository de bunlarý çaðýrdým ve sql sorgularý ile 
+iþlem yaptýrdým. Employeecontrollerda kaldýk 30.video izlenilcek
+
+30. Video Ýzle

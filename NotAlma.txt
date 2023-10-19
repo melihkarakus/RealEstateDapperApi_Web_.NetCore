@@ -98,6 +98,13 @@ ve parantez içinde bende text ve value istedi value bir id gönderme , text ise b
 
 29. Video ilk önce dtos oluþturuldu emplooye için databasedeki verileri çekmek için ardýndan bir IemployeeRepository ve EmployeeRepository oluþturdum.
 IemployeeRepositoryde crud iþlemlerini gerçekleþtirmek için tanýmlamalar yaptým. ardýndan EmployeeRepository de bunlarý çaðýrdým ve sql sorgularý ile 
-iþlem yaptýrdým. Employeecontrollerda kaldýk 30.video izlenilcek
+iþlem yaptýrdým. Employeecontrollerda kaldýk 
 
-30. Video Ýzle
+30. Video ilk baþta dtos klasöründe employeedto oluþturduk ve bu oluþturulan employeeda crud iþlemleri için database verilerimizi çekeceðimiz birer proplar oluþturduk.
+ardýndan bunlarý EmployeeControllerda api sayfamýzda swaggerda hepsinin iþlem yapabilmesi için gerekli kodlamalarý yazdýk. Api tarafý bittikten sonra uý tarafýnda bir
+dtos klasörü daha var onun içine employeedto oluþturduk ve apide ki dto gibi tanýmlamalar yaptýk ardýndan EmployeeControllerda onlarý iþlenmesi için gerekli kodlamalar 
+yazýldý.
+
+31. Video employeecontroller da crud iþlemlerini site üzerinden yapmak için gerekli kodlarý yazdýk bakabilirsin
+
+32. Video

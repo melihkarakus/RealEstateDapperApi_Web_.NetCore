@@ -107,4 +107,7 @@ yazýldý.
 
 31. Video employeecontroller da crud iþlemlerini site üzerinden yapmak için gerekli kodlarý yazdýk bakabilirsin
 
-32. Video
+32. Video api tarafýnda Repository klasöründe Istatistics ve Statistics diye biri interface biri class olarak gerekli çekeceðimiz baþlýklarý adlandýrdýk ardýndan 
+bunlarý Statistics de sql sorgularý ile çaðýrdýk. Çaðýrýlan SQL sorgularýný api tarafýnda karþýmýza dökmek için httpget ile gerekli kodlarý yazdýk.
+
+33. Video Ýzle

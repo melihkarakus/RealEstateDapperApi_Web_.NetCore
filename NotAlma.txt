@@ -110,4 +110,9 @@ yazýldý.
 32. Video api tarafýnda Repository klasöründe Istatistics ve Statistics diye biri interface biri class olarak gerekli çekeceðimiz baþlýklarý adlandýrdýk ardýndan 
 bunlarý Statistics de sql sorgularý ile çaðýrdýk. Çaðýrýlan SQL sorgularýný api tarafýnda karþýmýza dökmek için httpget ile gerekli kodlarý yazdýk.
 
-33. Video Ýzle
+33 - 34 Video IstatisticRepository tanýmlananlarý statisticrepositoryde sql soruglarý ile hazýrlayýp bunlarý apideki statisticscontrollerda swagger için çalýþtýrmýþ olduk.
+
+35. Video UI tarafýndaki controller kýsmýnda StatisticsControllerda swagger hazýrladýðýmýz SQL þartlý çekme verilerini UI tarafýnda admin panelinde istatistikli þekiklde 
+swagger da hazýrladýðýmýz sql verileri admin panelinde yansýttýk.
+
+36. Video izle

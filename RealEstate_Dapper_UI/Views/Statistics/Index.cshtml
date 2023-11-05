@@ -13,7 +13,7 @@
                     <div class="row g-4">
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                                <i class="fa fa-address-book fa-3x text-primary"></i>
                                 <div class="ms-3">
                                     <p class="mb-2">Aktif Kategori</p>
                                     <h6 class="mb-0">@ViewBag.activecategoryCount</h6>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                                <i class="fa fa-user fa-3x text-primary"></i>
                                 <div class="ms-3">
                                     <p class="mb-2">Aktif Çalışan</p>
                                     <h6 class="mb-0">@ViewBag.activeEmployeeCount</h6>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                                <i class="fa fa-building fa-3x text-primary"></i>
                                 <div class="ms-3">
                                     <p class="mb-2">Daire Sayısı</p>
                                     <h6 class="mb-0">@ViewBag.ApartmentCount</h6>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                                <i class="fa fa-rocket fa-3x text-primary"></i>
                                 <div class="ms-3">
                                     <p class="mb-2">Ortalama Kira Fiyatı</p>
                                     <h6 class="mb-0">@ViewBag.AveregeProductPriceByRent</h6>
@@ -113,37 +113,37 @@
                     <div class="row g-4">
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                                <i class="fa fa-eye fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Today Sale</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">En İyi Şehir Adı Sayısı</p>
+                                    <h6 class="mb-0">@ViewBag.CityNameByMaxProductCount</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                                <i class="fa fa-random fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Total Sale</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">Farklı Şehir Sayısı</p>
+                                    <h6 class="mb-0">@ViewBag.DifferentCityCount</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                                <i class="fa fa-address-card fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Today Revenue</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">En Çok İlan Veren Çalışan</p>
+                                    <h6 class="mb-0">@ViewBag.EmployeeNameByMaxProductCount</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                                <i class="fa fa-check fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Total Revenue</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">Son Ürün Fiyatı</p>
+                                    <h6 class="mb-0">@ViewBag.LastProductPrice</h6>
                                 </div>
                             </div>
                         </div>
@@ -163,37 +163,38 @@
                     <div class="row g-4">
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                                <i class="fa fa-battery-full fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Today Sale</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">En Yeni İnşaat</p>
+                                    <h6 class="mb-0">@(int.Parse(ViewBag.NewestBuildingYear) - DateTime.Now.Year > 0 ? 
+                                        (int.Parse(ViewBag.NewestBuildingYear) - DateTime.Now.Year) : "Yeni Bina - Yıl Dolmadı.")  </h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                                <i class="fa fa-battery-quarter fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Total Sale</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">En Eski İnşaat</p>
+                                    <h6 class="mb-0">@ViewBag.OldestBuildingYear</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                                <i class="fa fa-battery-empty fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Today Revenue</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">Pasif Kategori Sayısı</p>
+                                    <h6 class="mb-0">@ViewBag.PassiveCategoryCount</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                                <i class="fa fa-calculator fa-3x text-primary"></i>
                                 <div class="ms-3">
-                                    <p class="mb-2">Total Revenue</p>
-                                    <h6 class="mb-0">$1234</h6>
+                                    <p class="mb-2">Kategori Sayısı</p>
+                                    <h6 class="mb-0">@ViewBag.ProductCount</h6>
                                 </div>
                             </div>
                         </div>

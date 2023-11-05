@@ -38,7 +38,7 @@ namespace RealEstate_Dapper_UI.Controllers
             var client3 = _httpClientFactory.CreateClient();
             var responseMessage3 = await client3.GetAsync("https://localhost:44338/api/Statistics/AveregeProductPriceByRent");
             var jsonData3 = await responseMessage3.Content.ReadAsStringAsync();
-            ViewBag.AveregeProductPriceByRent = jsonData3;
+            ViewBag.AveregeProductPriceByRent = jsonData3.Substring(0, jsonData3.Length - 7);
             #endregion
 
             #region DüşükKiraSayısı
@@ -70,50 +70,50 @@ namespace RealEstate_Dapper_UI.Controllers
             var client8 = _httpClientFactory.CreateClient();
             var responseMessage8 = await client8.GetAsync("https://localhost:44338/api/Statistics/CityNameByMaxProductCount");
             var jsonData8 = await responseMessage8.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData8;
+            ViewBag.CityNameByMaxProductCount = jsonData8;
             #endregion
             #region FarklıŞehirSayısı
             var client9 = _httpClientFactory.CreateClient();
             var responseMessage9 = await client9.GetAsync("https://localhost:44338/api/Statistics/DifferentCityCount");
             var jsonData9 = await responseMessage9.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData9;
+            ViewBag.DifferentCityCount = jsonData9;
             #endregion
             #region EnÇokİlanVerenÇalışan
             var client10 = _httpClientFactory.CreateClient();
             var responseMessage10 = await client10.GetAsync("https://localhost:44338/api/Statistics/EmployeeNameByMaxProductCount");
             var jsonData10 = await responseMessage10.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData10;
+            ViewBag.EmployeeNameByMaxProductCount = jsonData10;
             #endregion
             #region SonÜrünFiyatı
             var client11 = _httpClientFactory.CreateClient();
             var responseMessage11 = await client11.GetAsync("https://localhost:44338/api/Statistics/LastProductPrice");
             var jsonData11 = await responseMessage11.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData11;
+            ViewBag.LastProductPrice = jsonData11;
             #endregion
 
             #region EnYeniİnşaat
             var client12 = _httpClientFactory.CreateClient();
             var responseMessage12 = await client12.GetAsync("https://localhost:44338/api/Statistics/NewestBuildingYear");
             var jsonData12 = await responseMessage12.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData12;
+            ViewBag.NewestBuildingYear = jsonData12;
             #endregion
             #region EnEskiİnşaat
             var client13 = _httpClientFactory.CreateClient();
             var responseMessage13 = await client13.GetAsync("https://localhost:44338/api/Statistics/OldestBuildingYear");
             var jsonData13 = await responseMessage13.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData13;
+            ViewBag.OldestBuildingYear = jsonData13;
             #endregion
             #region PasifKategoriSayısı
             var client14 = _httpClientFactory.CreateClient();
             var responseMessage14 = await client14.GetAsync("https://localhost:44338/api/Statistics/PassiveCategoryCount");
             var jsonData14 = await responseMessage14.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData14;
+            ViewBag.PassiveCategoryCount = jsonData14;
             #endregion
             #region KategoriSayısı
             var client15 = _httpClientFactory.CreateClient();
             var responseMessage15 = await client15.GetAsync("https://localhost:44338/api/Statistics/ProductCount");
             var jsonData15 = await responseMessage15.Content.ReadAsStringAsync();
-            ViewBag.activecategoryCount = jsonData15;
+            ViewBag.ProductCount = jsonData15;
             #endregion
 
             return View();

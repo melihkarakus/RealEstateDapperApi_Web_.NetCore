@@ -115,4 +115,18 @@ bunlarý Statistics de sql sorgularý ile çaðýrdýk. Çaðýrýlan SQL sorgularýný api 
 35. Video UI tarafýndaki controller kýsmýnda StatisticsControllerda swagger hazýrladýðýmýz SQL þartlý çekme verilerini UI tarafýnda admin panelinde istatistikli þekiklde 
 swagger da hazýrladýðýmýz sql verileri admin panelinde yansýttýk.
 
-36. Video izle
+36. Videoda tanýmlanan statisticsleri sayfamýzda etkin hale getirdik ve iconlarý deðiþtirdik
+
+37. Videoda WhoWeAreDetail Kýsmýný gerekli apilerden consume iþlemi yapmak için controller tarafýnda gerekli kodlarý çýkartýyoruz ve gerekli kodlarý UI tarafýnda 
+WhoWeAreDetail kýsmýnda görebilirsin.
+
+38. Videoda Service þlemleri için consume iþlemi uygulayacaktýk fakat ekle sil ve güncelle iþlemleri eklemediðimiz için Api tarafýnda servicelerimize ekle sil güncelle
+iþlemi yaptýýrdýk ilk baþta Api tarafýnda ServiceRepository var ve bu serviceRepostoryde ekleme silme ve güncelleme iþlemleri yaptýk. Ardondan bunlarý controller 
+tarafýnda ServiceControllerda swaggerda gözüknmesi ve iþleme uygulanmasý için ekleme silme güncelleme iþlemlerini oraya taþýma iþlemi gibi yaptýk ardýndan UI tarafýnda 
+ServiceControllerda gerekli frontend tarafýnda ekleme silme yapýlabilmesi için gerekli kodlarý yazdýk.
+
+39. Videoda Gerekli View iþlemlerini frontend tarafýnda iþleme alýndý.
+
+40. Videoda Icon düzenlemeleri yapýldý.
+
+41. Video izle

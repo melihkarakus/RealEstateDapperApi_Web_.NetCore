@@ -24,7 +24,7 @@
                                 <th scope="col">Sil</th>
                                 <th scope="col">Güncelle</th>
                                 <th scope="col">Sitede Gör</th>
-                            </tr>
+                                <th scope="col">Günün Fırsatı</th>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)    
@@ -40,7 +40,17 @@
                                     <td>@item.type</td>
                                     <td><a href="/Product/DeleteProduct/@item.productID" class="btn btn-danger">Sil</a></td>
                                     <td><a href="/Product/UpdateProduct/@item.productID" class="btn btn-success">Güncelle</a></td>
-                                    <td><a href="/Product/DetailProduct/@item.productID" class="btn btn-success">Sitede Gör</a></td>
+                                    <td><a href="/Product/DetailProduct/@item.productID" class="btn btn-primary">Sitede Gör</a></td>
+                                    <td>
+                                        @if(item.dealoftheday == true)
+                                        {
+                                            <a href="/Product/ProductDealOfTheDayStatusChangeToFalse/@item.productID" class="btn btn-warning">Pasif Yap</a>
+                                        }
+                                        @if(item.dealoftheday == false)
+                                        {
+                                            <a href="/Product/ProductDealOfTheDayStatusChangeToTrue/@item.productID" class="btn btn-dark">Aktif Yap</a>
+                                        }
+                                    </td>
                                 </tr>
                             }
                         </tbody>

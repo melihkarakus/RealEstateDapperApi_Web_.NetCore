@@ -129,4 +129,13 @@ ServiceControllerda gerekli frontend tarafýnda ekleme silme yapýlabilmesi için g
 
 40. Videoda Icon düzenlemeleri yapýldý.
 
-41. Video izle
+41. Video IbottomgridRepository de gerekli crud iþlemleri yapýldý ve bu uý kýsmýna controller yansýtýlýp viewde iþlendi
+
+42. Video IpopularLocationRepository ve PopularLocationRepository de ikisindede crud iþlemleri gerçekleþti PopularLocationRepository de ilk baþta crud iþlemlerinin tanýmlanmasý
+yapýldý. IpopularLocationRepository de ise tanýmlanan crud iþlemleri kodlanarak iþlendi. UI kýsmýnda controllerda popularLocationControllerda Crud iþlemleri frontend tarafýnda
+yapýlmasý için controllerda gerekli kodlamalar yapýldý ve ardýndan ýndexde iþleme alýndý.
+
+43. Video Birþey Yapýlmadý.
+
+44. Videoda Ýki Adet IProductRepository metod tanýmlandý aktif ve pasif et þeklinde. ProductRepository de ise bunlarýn kodlamalarý geçildi ve Api ProductControllerda
+tanýmlanan iki metod çaðrýlarak apide düzenlendi. 

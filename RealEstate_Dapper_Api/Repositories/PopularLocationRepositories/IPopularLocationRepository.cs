@@ -7,5 +7,13 @@ namespace RealEstate_Dapper_Api.Repositories.PopularLocationRepositories
     {
         Task<List<ResultPopularLocationDto>> GetAllPopularLocationAsync();
         // Tüm kategorilerin asenkron bir şekilde alınması için metod tanımı.
+
+        void CreatePopularLocation(CreatePopularLocationDto createPopularLocationDto);
+
+        void DeletePopularLocation(int id);
+
+        void UpdatePopularLocation(UpdatePopularLocationDto updatePopularLocationDto);
+
+        Task<GetByIDPopularLocationDto> GetPopularLocation(int id);
     }
 }

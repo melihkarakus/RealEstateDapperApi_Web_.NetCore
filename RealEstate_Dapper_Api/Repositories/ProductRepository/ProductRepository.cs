@@ -27,7 +27,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
         public async Task<List<ResultProductWithCategoryDto>> GetAllProductWithCategory()
         {
             // SQL sorgusu, 'Product' tablosundaki tüm verileri alır ve ilgili kategori adını ekler.
-            string query = "SELECT ProductID, Title, Price, City, District, CategoryName, CoverImage, Type, Address FROM Product INNER JOIN Category ON Product.ProductCategory = Category.CategoryID";
+            string query = "SELECT ProductID, Title, Price, City, District, CategoryName, CoverImage, Type, Address, DealOfTheDay FROM Product INNER JOIN Category ON Product.ProductCategory = Category.CategoryID";
             using (var connection = _context.CreateConnection())
             {
                 var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);
@@ -35,5 +35,28 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
                 return values.ToList(); // Dönüştürülmüş sonuçları bir liste olarak döndürür.
             }
         }
+
+        public async void ProductDealOfTheDayStatusChangeToFalse(int id)
+        {
+            string query = "Update Product Set DealOfTheDay = 0 where ProductID = @productID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productID", id);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
+        }
+
+        public async void ProductDealOfTheDayStatusChangeToTrue(int id)
+        {
+            string query = "Update Product Set DealOfTheDay = 1 where ProductID = @productID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productID", id);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
+        }
+
     }
 }

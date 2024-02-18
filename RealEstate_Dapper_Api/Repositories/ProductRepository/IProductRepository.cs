@@ -12,6 +12,6 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
 
         void ProductDealOfTheDayStatusChangeToTrue(int id); // Günün Fırsatını aktif etmek için
         void ProductDealOfTheDayStatusChangeToFalse(int id); // Günün Fırsatını pasif etmek için
-
+        Task<List<ResultLast5ProductWithCategoryDto>> GetLast5ProductAsync();
     }
 }

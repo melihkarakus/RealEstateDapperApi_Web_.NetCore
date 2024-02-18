@@ -51,5 +51,11 @@ namespace RealEstate_Dapper_Api.Controllers
             _productRepository.ProductDealOfTheDayStatusChangeToFalse(id);
             return Ok("İlan Durumnu Güncellendi");
         }
+        [HttpGet("GetLast5ProductList")]
+        public async Task<IActionResult> GetLast5ProductList()
+        {
+            var values = await _productRepository.GetLast5ProductAsync();
+            return Ok(values);
+        }
     }
 }

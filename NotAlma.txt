@@ -155,4 +155,28 @@ son 4 mesajý getirme iþlemi api kýsmýnda yapýldý. ContactController api tarafýnd
 Viewcomponents içine tanýmlama yapýldý ardýndan yapýlan tanýmlama adýnda shared klasör oluþturup içine view tanýmladýk ve PartialComponent klasöründe Last4ComponentPartial
 sýnýfýnda Apide çaðýralaný getirdik ve fronted kýsmýnda son 4 mesaj getirme iþlemi gerçekleþtirildi.
 
-50. Video Ýzle
+50. Video ise 47. Videoda yapýlanýn aynýlarýný yaptýk ToDoList için ve ardýndan ajax kullanýlacak.
+
+!!!!!!Önemli SignalR
+51. Videoda SignalR giriþ yapýldý. Ýlk baþta UI kýsmýna sað týklayýp client-side library girip ordan signalr ekledik. Ardýndan api kýsmýna geçtik ve api kýsmýnda Hubs diye 
+klasör oluþturduk ve içine bir class tanýmladýk SignalRHub diye bunu tanýmladýktan sonra class adýna : koyup Hubs metodunu geçtik. ardýndan program cs geldik ve signalr için
+gerekli konfigürasyon iþlemlerini yaptýk.
+
+52. Videoda SignalR baðlantý kontrole etmek için UIControllerda SignalRController oluþturuldu ve baðlantý için view içinde gerekli kodlar yazýldý. Controller ismi
+SignalRTestController
+
+53. Video UI kýsmýndaki kategori kýsmýnda SignalRHub içine metod yazýldý ve valueya kategori sayýsý yazýldý incele SignalRHub Api kýsmýnda incele metodlarý
+builder.Services.AddHttpClient(); //Bunu buraya eklemeliyiz çünkü Apiden veri çekmede bunu buraya eklememizi istiyor. 
+bu kýsmýda api program.cs tarafýna eklemem gerekli.
+
+54. Video SignalRHub ýndex tarafýnda veriyi dinamik azaltma çoðaltma anlýk veri iþlemi için ýndex tarafýnda 
+/* Anlýk Veri Çekebilmek için bunu metodlarý kullanmam lazým kullanýlan metod setInterval(() => {},1000); */ Bu þekilde metod tanýmlandý buraya incele önemli.
+!!!!!!!!Önemli SignalR
+
+54. Videodanun Devamýnda SQL de Appuser ve Approle tablolarý oluþturuldu Appuser tablosundaki RoleId eklendi Role tablosundaki RoleID ile eþleþtirildi.
+
+!!!!!!!!Önemli JWT Token
+55. Videoda Token ne iþe yarar öðrenildi. Api kýsmýnda Tools klasörünün altýnda classlar tanýmlandý.
+
+56. Videoda Api kýsmýndali Tools içinde JwtTokenGenerator class içinde jwt oluþturmak için gerekli kodlamalar yazýldý ve api kýsmýnda Enums klasörü oluþturup role
+için role adlarý verildi.

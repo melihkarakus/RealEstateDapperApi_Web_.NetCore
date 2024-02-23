@@ -7,6 +7,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
     {
         Task<List<ResultProductDto>> GetAllProductAsync();
         // Tüm Product asenkron bir şekilde alınması için metod tanımı.
+        Task<List<ResultProductAdvertListWithCategoryByEmployeeDto>> GetProductAdvertListByEmployee(int id);
         Task<List<ResultProductWithCategoryDto>> GetAllProductWithCategory();
         // Kategorileriyle beraber getirilen async metot.
 

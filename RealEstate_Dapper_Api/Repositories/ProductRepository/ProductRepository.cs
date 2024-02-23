@@ -46,6 +46,20 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
             }
         }
 
+        public async Task<List<ResultProductAdvertListWithCategoryByEmployeeDto>> GetProductAdvertListByEmployee(int id)
+        {
+            // SQL sorgusu, 'Product' tablosundaki tüm verileri alır ve ilgili kategori adını ekler.
+            string query = "SELECT ProductID, Title, Price, City, District, CategoryName, CoverImage, Type, Address, DealOfTheDay FROM Product INNER JOIN Category ON Product.ProductCategory = Category.CategoryID where EmployeeId = @employeeId";
+            var paremeters = new DynamicParameters();
+            paremeters.Add("@employeeId", id);
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryAsync<ResultProductAdvertListWithCategoryByEmployeeDto>(query, paremeters);
+                // Veritabanından gelen sonuçları ResultProductDto türünde nesnelere dönüştürür.
+                return values.ToList(); // Dönüştürülmüş sonuçları bir liste olarak döndürür.
+            }
+        }
+
         public async void ProductDealOfTheDayStatusChangeToFalse(int id)
         {
             string query = "Update Product Set DealOfTheDay = 0 where ProductID = @productID";

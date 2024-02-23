@@ -180,3 +180,10 @@ bu kýsmýda api program.cs tarafýna eklemem gerekli.
 
 56. Videoda Api kýsmýndali Tools içinde JwtTokenGenerator class içinde jwt oluþturmak için gerekli kodlamalar yazýldý ve api kýsmýnda Enums klasörü oluþturup role
 için role adlarý verildi.
+
+57. Videoda Emlakçý kullanýcý paneli için bir area kullandýk ve areanýn içine ýndex ve layout oluþturduk ardýndan admin panelindeki paneli alýp kopyala yapýþtýr yaptýk
+ardýndan gerekli View componenti oluþturduk sidebar için ve içini deðiþtirdik. 
+
+58. Videoda Employee göre ilanlarý getirmek için ilk baþta IProductRepository de metod tanýmlandý ardýndan dto tarafýnda ona özel bir dto tanýmlanýp IProductda metodun
+içinde geçildi. IProductRepository kullanan metod PRoductRepository de geçilip sql sorgusu yazýldý. ve Api ProductControllerda gerekli api çaðýrma iþlemi yapýldý.
+UI kýsmýna geldiðmizde areas içinde olan MyAdvertControllerda apiden çekilen veriyi frontend tarafýna gösterme iþlemi yapýldý ve ýndex çaðrýldý.

@@ -1,7 +1,39 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddHttpClient();
+
+/*JWT login iþlemi için program.cs girilmesi gereken kod*/
+// Uygulama servislerine JWT tabanlý kimlik doðrulama ekleniyor.
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+
+    // JWT tabanlý kimlik doðrulama için Cookie tabanlý kimlik doðrulama ekleniyor.
+    .AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
+    {
+        // Kullanýcý giriþi yapýlmasý gerektiðinde yönlendirilecek sayfanýn yolu belirleniyor.
+        opt.LoginPath = "/Login/Index/";
+
+        // Kullanýcý çýkýþý yapýldýðýnda yönlendirilecek sayfanýn yolu belirleniyor.
+        opt.LogoutPath = "/Login/LogOut/";
+
+        // Eriþim reddedildiðinde yönlendirilecek sayfanýn yolu belirleniyor.
+        opt.AccessDeniedPath = "/Pages/AccessDenied/";
+
+        // Oluþturulan cookie'nin sadece HTTP istekleri üzerinden eriþilebilir olmasý saðlanýyor.
+        opt.Cookie.HttpOnly = true;
+
+        // Cookie'nin güvenlik politikasý belirleniyor.
+        opt.Cookie.SameSite = SameSiteMode.Strict;
+        opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+
+        // Oluþturulan cookie'nin adý belirleniyor.
+        opt.Cookie.Name = "realestateJwt";
+    });
+/*JWT login iþlemi için program.cs girilmesi gereken kod*/
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -19,6 +51,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

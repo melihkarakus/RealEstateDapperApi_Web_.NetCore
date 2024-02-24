@@ -180,6 +180,8 @@ bu kýsmýda api program.cs tarafýna eklemem gerekli.
 
 56. Videoda Api kýsmýndali Tools içinde JwtTokenGenerator class içinde jwt oluþturmak için gerekli kodlamalar yazýldý ve api kýsmýnda Enums klasörü oluþturup role
 için role adlarý verildi.
+!!!!!!!!!Önemli JWT Token
+
 
 57. Videoda Emlakçý kullanýcý paneli için bir area kullandýk ve areanýn içine ýndex ve layout oluþturduk ardýndan admin panelindeki paneli alýp kopyala yapýþtýr yaptýk
 ardýndan gerekli View componenti oluþturduk sidebar için ve içini deðiþtirdik. 
@@ -187,3 +189,15 @@ ardýndan gerekli View componenti oluþturduk sidebar için ve içini deðiþtirdik.
 58. Videoda Employee göre ilanlarý getirmek için ilk baþta IProductRepository de metod tanýmlandý ardýndan dto tarafýnda ona özel bir dto tanýmlanýp IProductda metodun
 içinde geçildi. IProductRepository kullanan metod PRoductRepository de geçilip sql sorgusu yazýldý. ve Api ProductControllerda gerekli api çaðýrma iþlemi yapýldý.
 UI kýsmýna geldiðmizde areas içinde olan MyAdvertControllerda apiden çekilen veriyi frontend tarafýna gösterme iþlemi yapýldý ve ýndex çaðrýldý.
+
+59. Videoda LoginController oluþturduk Api katmanýnda ve orada httppost olarak tanýmlanan kodlamalarý içini doldurduk ve oradaki dto için ayrý bir dto tanýmlandý.
+ve biz ýd göre getirme iþlemi yapmamýz gerekiyordu id ye getirmek için ayrý bir dto tanýmlayýp query sorgularýna bir tane daha eklenip kodlamalar yazýldý. LoginController
+bakarsan anlarsýn. 
+
+!!!!!Önemli Token ile giriþ yap iþlemi
+60. Videoda Login iþlemi yapabilmek için UI kýsmýndaki controller da baya uzun bir kod yazýlmýþtýr. JWT Token oluþturarak yapabilmemiz için o kodu incele.
+
+61. Videoda Program.cs gerekli kod düzenlemeleri yapýldý. Açýklama satýrýna baktýðýnda jwt ile ilgili iþlemleri görebilirsin.
+!!!!!!Önemli Token ile giriþ yap iþlemi
+
+62. video Ýzle

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.EmployeDtos;
@@ -6,6 +7,7 @@ using System.Text;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -17,14 +19,18 @@ namespace RealEstate_Dapper_UI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:44338/api/Employees");
-            if (responseMessage.IsSuccessStatusCode) 
+            var token = User.Claims.FirstOrDefault(x => x.Type == "realestatetoken")?.Value;
+            if(token != null)
             {
-                var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var value = JsonConvert.DeserializeObject<List<ResultEmployeeDto>>(jsonData);
-                return View(value);
-            }
+                var client = _httpClientFactory.CreateClient();
+                var responseMessage = await client.GetAsync("https://localhost:44338/api/Employees");
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                    var value = JsonConvert.DeserializeObject<List<ResultEmployeeDto>>(jsonData);
+                    return View(value);
+                }
+            }  
             return View();
         }
         [HttpGet]

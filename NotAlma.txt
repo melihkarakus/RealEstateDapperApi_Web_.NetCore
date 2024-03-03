@@ -208,3 +208,5 @@ JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");//mapleme yapma
 63. Videoda giriþ yapan kullanýcýya ait idye göre verileri çekme iþlemi yapmak istiyoruz bununla alakalý da LoginService ekranýnda ClaimTypes.NameÝdentitfier methodu kullanarak
 kullanacýnýn ýdsini EmployeeControllerda çekme iþlemi yapabiliyoruz. Area içinde MyAdvertControllerda Gerekli ILoginServiceden bir parametreden bir constrocter geçildi
 ve geçilen constractýrdan id giriþ yapan kullanýcýnýn verilerinin gelmesini saðlanmýþtýr. 
+
+64. Video Ýzle

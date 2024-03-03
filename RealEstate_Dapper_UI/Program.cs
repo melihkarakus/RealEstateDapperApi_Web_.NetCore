@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RealEstate_Dapper_UI.Services;
+using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
+
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");//mapleme yapmadan direk id verisini getirmek için login iþleminde 62. Video izleyebilirsin.
 
 // Add services to the container.
 builder.Services.AddHttpClient();
@@ -33,6 +37,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 /*JWT login iþlemi için program.cs girilmesi gereken kod*/
 
+builder.Services.AddHttpContextAccessor();//JWT login için tanýmlanmasý gereken bir method.
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 builder.Services.AddControllersWithViews();
 

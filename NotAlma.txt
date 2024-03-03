@@ -200,4 +200,11 @@ bakarsan anlarsýn.
 61. Videoda Program.cs gerekli kod düzenlemeleri yapýldý. Açýklama satýrýna baktýðýnda jwt ile ilgili iþlemleri görebilirsin.
 !!!!!!Önemli Token ile giriþ yap iþlemi
 
-62. video Ýzle
+!!!!!!! JWT Ýle Id getirme iþlemi
+62. videoda giriþ yapan kullanýcýnýn ýdsini getirmek istediðimiz için program.cs tanýmlanan iki method var onlarý tanýmladýk baþka birþey yapýlmadý. 
+tanýmlanan methodlar: builder.Services.AddHttpContextAccessor();//JWT login için tanýmlanmasý gereken bir method
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");//mapleme yapmadan direk id verisini getirmek için login iþleminde 62. Video izleyebilirsin.
+
+63. Videoda giriþ yapan kullanýcýya ait idye göre verileri çekme iþlemi yapmak istiyoruz bununla alakalý da LoginService ekranýnda ClaimTypes.NameÝdentitfier methodu kullanarak
+kullanacýnýn ýdsini EmployeeControllerda çekme iþlemi yapabiliyoruz. Area içinde MyAdvertControllerda Gerekli ILoginServiceden bir parametreden bir constrocter geçildi
+ve geçilen constractýrdan id giriþ yapan kullanýcýnýn verilerinin gelmesini saðlanmýþtýr. 
